@@ -9,13 +9,16 @@ import {
   Body,
   NotFoundException,
   ParseIntPipe,
-  ValidationPipe
+  ValidationPipe,
+  UseGuards
 } from '@nestjs/common';
 import { CoursesService } from './courses.service';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
+import {RouteGuard} from 'src/guards/route.guard';
 
 @Controller('courses')
+@UseGuards(RouteGuard)
 export class CoursesController {
   private readonly courses: CoursesService;
 

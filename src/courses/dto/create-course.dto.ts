@@ -1,8 +1,8 @@
 import {IsEnum, MinLength} from 'class-validator';
 
 enum CourseType {
-    JS = 'JavaScript',
-    Rust = 'Rust'
+    JS = 'js',
+    Rust = 'rust'
 }
 
 export class CreateCourseDto {
