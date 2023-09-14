@@ -1,0 +1,4 @@
+nest generate module module-name / nest g module
+
+nest g resource resource-name
+
